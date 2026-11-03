@@ -1,0 +1,55 @@
+<c:set var="ctx" value="${pageContext.request.contextPath}"/>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title><c:out value="${empty title ? 'VivaPoint' : title}"/> | VivaPoint</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Newsreader:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="${ctx}/css/style.css">
+</head>
+<body>
+<header class="site-h"><div class="wrap">
+  <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">&#9776;</button>
+  <a class="brand" href="${ctx}/"><span class="mark">V</span><span class="t">VivaPoint<small>Viva and quiz portal</small></span></a>
+  <nav aria-label="Main">
+    <a href="${ctx}/">Home</a>
+    <a href="${ctx}/about.jsp">About</a>
+    <div class="dd">
+      <button class="ddb" aria-haspopup="true">Subjects &#9662;</button>
+      <div class="menu">
+        <a href="${ctx}/quiz?subject=python">Python quiz</a>
+        <a href="${ctx}/quiz?subject=dbms">Database Systems quiz</a>
+        <a href="${ctx}/quiz?subject=net">Computer Networks quiz</a><a href="${ctx}/quiz?subject=java">Java Programming quiz</a><a href="${ctx}/quiz?subject=web">Web Technologies quiz</a><a href="${ctx}/quiz?subject=os">Operating Systems quiz</a>
+      </div>
+    </div>
+    <c:choose>
+      <c:when test="${not empty sessionScope.uid}">
+        <a href="${ctx}/dashboard">My attempts</a>
+        <a class="primary" href="${ctx}/logout">Log out</a>
+      </c:when>
+      <c:otherwise>
+        <a href="${ctx}/login">Log in</a>
+        <a class="primary" href="${ctx}/register">Sign up</a>
+      </c:otherwise>
+    </c:choose>
+    <button id="tg" aria-label="Switch light or dark theme" title="Switch theme">&#9680;</button>
+  </nav>
+</div></header>
+<div class="scrim" id="scrim"></div>
+<aside class="side" id="side" aria-hidden="true" aria-label="Menu">
+  <div class="sh"><strong>VivaPoint</strong><button id="sclose" aria-label="Close menu">&#10005;</button></div>
+  <div id="sbody">
+    <a href="${ctx}/">Home</a>
+    <a href="${ctx}/about.jsp">About</a>
+    <h4>Subjects</h4>
+    <a href="${ctx}/quiz?subject=python">Python quiz</a>
+    <a href="${ctx}/quiz?subject=dbms">Database Systems quiz</a>
+    <a href="${ctx}/quiz?subject=net">Computer Networks quiz</a><a href="${ctx}/quiz?subject=java">Java Programming quiz</a><a href="${ctx}/quiz?subject=web">Web Technologies quiz</a><a href="${ctx}/quiz?subject=os">Operating Systems quiz</a>
+    <h4>Account</h4>
+    <c:choose>
+      <c:when test="${not empty sessionScope.uid}"><a href="${ctx}/dashboard">My attempts</a><a href="${ctx}/logout">Log out</a></c:when>
+      <c:otherwise><a href="${ctx}/login">Log in</a><a href="${ctx}/register">Sign up</a></c:otherwise>
+    </c:choose>
+  </div>
+</aside>

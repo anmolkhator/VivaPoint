@@ -1,0 +1,21 @@
+<footer class="site-f"><div class="wrap">
+  <div class="f-top">
+    <div><strong>Ready for your next attempt?</strong><br>Create a free account, take a 20-question quiz and keep track of every session.</div>
+    <a class="btn" href="${ctx}/register">Sign up free</a>
+  </div>
+  <div class="col"><h4>VivaPoint</h4><span>VivaPoint helps students prepare for exams. Take timed quizzes in six subjects and review an explanation for every question.</span></div>
+  <div class="col"><h4>Subjects</h4>
+    <a href="${ctx}/quiz?subject=python">Python</a>
+    <a href="${ctx}/quiz?subject=dbms">Database Systems</a>
+    <a href="${ctx}/quiz?subject=net">Computer Networks</a><a href="${ctx}/quiz?subject=java">Java Programming</a><a href="${ctx}/quiz?subject=web">Web Technologies</a><a href="${ctx}/quiz?subject=os">Operating Systems</a></div>
+  <div class="col"><h4>Explore</h4>
+    <a href="${ctx}/">Home</a>
+    <a href="${ctx}/about.jsp">About</a>
+    <a href="${ctx}/register">Sign up</a>
+    <a href="${ctx}/login">Log in</a></div>
+  <div class="col"><h4>Good to know</h4><span>Free to sign up</span><span>Works on phone, tablet and desktop</span><span>Each student sees only their own attempts</span></div>
+  <div class="f-bot"><span>&copy; 2026 VivaPoint. All rights reserved.</span><span>Practice results are for self-assessment only.</span></div>
+</div></footer>
+<script src="${ctx}/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMin slice">
+<defs><filter id="b" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="70"/></filter>
+<pattern id="d" width="36" height="36" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.6" fill="#9db8e6" opacity=".35"/></pattern></defs>
+<rect width="1600" height="1000" fill="#f5faff"/>
+<g filter="url(#b)"><circle cx="160" cy="120" r="260" fill="#cfe8ff"/><circle cx="1450" cy="90" r="280" fill="#e6dcff"/>
+<circle cx="1300" cy="620" r="240" fill="#ffe3d6"/><circle cx="260" cy="760" r="250" fill="#d6f5ea"/><circle cx="800" cy="420" r="200" fill="#fff3cf" opacity=".7"/></g>
+<rect width="1600" height="1000" fill="url(#d)"/>
+</svg>
